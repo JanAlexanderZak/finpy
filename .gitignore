@@ -1,0 +1,8 @@
+# Folders
+.venv
+*.pytest_cache
+
+# Files
+
+# Dont ignore
+!.gitignore
