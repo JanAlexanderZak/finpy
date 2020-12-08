@@ -2,9 +2,10 @@
 .venv
 *.pytest_cache
 *.mypy_cache
-*.mypy
+tests/mypy
 *.pytest
-*.pycharm.egg-info
+finpy/pycharm.egg-info
+*__pycache__
 
 # Files
 
