@@ -28,11 +28,11 @@ class Discounting:
 
 if __name__ == '__main__':
     discount = Discounting()
-    present_value = discount.present_value(100, 0.0526, 1)
+    future_payment = discount.future_payment(0.0717, 50, 10)
     interest = discount.interest(100, 50, 10)
+    present_value = discount.present_value(100, 0.0526, 1)
     year = discount.year(100, 0.0717, 50)
-    payment = discount.future_payment(0.0717, 50, 10)
-    print(present_value)
+    print(future_payment)
     print(interest)
+    print(present_value)
     print(year)
-    print(payment)

@@ -18,5 +18,3 @@ class TestDiscounting:
     def test_year(self):
         discount = Discounting()
         assert discount.year(100, 0.0717, 50) == pytest.approx(10.009, 3)
-
-
