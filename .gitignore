@@ -5,7 +5,9 @@
 tests/mypy
 *.pytest
 finpy/pycharm.egg-info
-*__pycache__
+tests/__pycache__
+finpy/__pycache__
+.idea
 
 # Files
 
