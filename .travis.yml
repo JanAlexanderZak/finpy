@@ -12,6 +12,6 @@ before_script:
 
 script:
   - python -m pip install -r requirements.txt
-  - mypy finpy/ --html-report tests/mypy
+  # - mypy finpy/ --html-report tests/mypy
   #- pylint --rcfile=tests/.pylintrc finpy/
   - pytest --cov=tests --cov-report=html:tests/pytest tests
