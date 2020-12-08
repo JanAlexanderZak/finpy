@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.express as px
 import numpy as np
-from typing import Union
+from typing import Tuple, Union
 
 
 class Cashflow:
@@ -16,7 +16,7 @@ class Cashflow:
             cash_profit: Union[int, float],
             non_cash_profit: Union[int, float],
             cash_expense: Union[int, float],
-            non_cash_expense: Union[int, float]):
+            non_cash_expense: Union[int, float]) -> Tuple[Union[int, float], Union[int, float]]:
         """ Calculate cashflow and profit
         :param cash_profit: cash
         :param non_cash_profit: eg. claims from suppliers
@@ -28,13 +28,13 @@ class Cashflow:
         profit = cashflow + (non_cash_profit - non_cash_expense)
         return cashflow, profit
 
-    def debt_capacity(self):
+    def debt_capacity(self) -> Union[int, float]:
         return 7 * self.free_cashflow() - np.average(self.debt)
 
-    def free_cashflow(self):
+    def free_cashflow(self) -> Union[int, float]:
         return self.average_cashflow() - np.average(self.running_cost)
 
-    def average_cashflow(self):
+    def average_cashflow(self) -> Union[int, float]:
         return np.average(self.profit + self.depreciation)
 
 
