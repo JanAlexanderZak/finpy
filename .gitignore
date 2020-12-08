@@ -1,6 +1,8 @@
 # Folders
 .venv
 *.pytest_cache
+*.mypy
+*.pytest
 
 # Files
 
