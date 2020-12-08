@@ -1,4 +1,5 @@
 import pytest
+
 from finpy.discounting import Discounting
 
 
