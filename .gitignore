@@ -1,8 +1,10 @@
 # Folders
 .venv
 *.pytest_cache
+*.mypy_cache
 *.mypy
 *.pytest
+*.pycharm.egg-info
 
 # Files
 
