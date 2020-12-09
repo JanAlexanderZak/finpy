@@ -41,15 +41,3 @@ class Discounting:
         # interest is the similar cost for debt
         wacc = (equity / (equity + debt) * equity_cost) + (debt / (debt + equity) * interest) * (1 - tax)
         return wacc
-
-
-if __name__ == '__main__':
-    discount = Discounting()
-    future_payment = discount.future_payment(0.0717, 50, 10)
-    interest = discount.interest(100, 50, 10)
-    present_value = discount.present_value(100, 0.0526, 1)
-    year = discount.year(100, 0.0717, 50)
-    print(future_payment)
-    print(interest)
-    print(present_value)
-    print(year)
