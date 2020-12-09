@@ -24,9 +24,16 @@ def gordon_growth_model(dividend, discount_rate, growth_rate):
     return present_value
 
 
-# income of 9600 per year, growth of 0.015, discount of 0.04
-dividend = 10
-gordon_growth_model(dividend, 0.09, 0.04)
+def implicit_growth_rate(_return, _dividend, _stock_value):
+    return _return * (_dividend / _stock_value)
 
-print(growth_rate(23, 5.6, 16))
-print(predict_price(23, 0.092, 1))
+
+def company_valuation(expected_profit, discount_rate, growth_rate):
+    """
+    :param expected_profit:
+    :param discount_rate:
+    :param growth_rate: can be organic or historic
+    :return:
+    """
+    return expected_profit / (discount_rate - growth_rate)
+
