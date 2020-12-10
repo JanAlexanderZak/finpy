@@ -11,14 +11,14 @@ def debt_ratio(debt, equity):
     return equity / (equity + debt)
 
 
-def expected_loss(probability_default: float, exposure_default: float, loss_default: float):
+def expected_loss(pd: float, ead: float, lgd: float):
     """
-    :param probability_default: Probability of default for one year ( eg. 4% means every 25 years)
-    :param exposure_default: Value of credit in given year
-    :param loss_default: how much is lost if credit defaults ( eg. loss_default = 25% means 75% is lost
-    :return: expected loss for given year
+    :param pd: Probability of default (PD) for one year (eg. 4% means every 25 years)
+    :param ead: Exposure at default (EAD) is the value of a default in given year
+    :param lgd: Loss given defaut (LGD). How much is lost if credit defaults (eg. loss_default = 25% means 75% is lost)
+    :return: expected loss (EL) for a given year
     """
-    return probability_default * exposure_default * (1 - loss_default)
+    return pd * ead * (1 - lgd)
 
 
 if __name__ == '__main__':
