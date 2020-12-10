@@ -15,7 +15,7 @@ class Discounting:
         return _present_value * ((1 + _interest) ** _year)
 
     @staticmethod
-    def interest(_future_payment,_present_value, _year) -> Union[float, int]:
+    def interest(_future_payment, _present_value, _year) -> Union[float, int]:
         return (_future_payment / _present_value) ** (1 / _year) - 1
 
     @staticmethod
